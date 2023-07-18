@@ -1,0 +1,90 @@
+/* Aplicando CSS Global */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+ul{ /*sacando las viñetas*/
+    list-style-type: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Aplicando CSS al encabezado */
+#logo{
+        width: 50%;
+        margin: auto; /*para centrar*/
+        padding-top: 10px;
+    }
+#menu{
+    text-align: center;
+}
+
+
+
+
+/* Aplicando comportamiento responsive o adaptativo MediaQueri*/
+/* Medium devices (tablets, 768px and up) Trabajando CSS-GRID*/
+@media (min-width: 768px) {
+    /* Aplicando CSS al encabezado */
+    #encabezado{
+        display: grid;
+        grid-template-columns: 1fr 2fr; /*rem em % fr px*/
+        align-items: center;
+    }
+    #menu{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    #opcionesIzquierdo{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    #opcionesDerecho{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #productos{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
+    }
+    /* Aplicando CSS a la galería */
+    section#galeria{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+/* Aplicando CSS al footer */
+#piePagina{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 0.5fr;
+    justify-items: center;
+    align-items: center;
+    background-color: blue;
+    color: white;
+}
+#redesSociales{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+ion-icon{
+    color: white;
+    font-size: 2rem;
+
+}
+
+}
+/* X-Large devices (large desktops, 1200px and up)*/
+ @media (min-width: 1200px) { 
+    section#galeria{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+    }
+}
